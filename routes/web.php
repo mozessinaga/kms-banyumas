@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminUserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,9 +23,9 @@ Route::get('/', function () {
 });
 
 
-Route::get('/lowongan', function () {
+Route::get('/joborder', function () {
     $data = [
-        'content' => 'home/lowongan/index'
+        'content' => 'home/joborder/index'
     ];
     return view('home.layouts.wrapper', $data);
 });
@@ -51,4 +52,17 @@ Route::get('/login', function () {
     ];
     //return view('home.index');
     return view('home.layouts.wrapper', $data);
+});
+
+// ======= ADMIN =======
+Route::prefix('/admin')->group(function(){
+    Route::get('/dashboard', function () {
+        $data = [
+            'content'   => 'admin/dashboard/index'
+        ];
+
+        return view('admin.layouts.wrapper', $data);
+    });
+
+    Route::resource('/user', AdminUserController::class);
 });

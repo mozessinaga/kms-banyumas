@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KMS Banyumas - Lowongan Tersedia</title>
+    <title>KMS Banyumas - Job Order Tersedia</title>
     <style>
         .wrapper-img-banner {
             max-width: 100%;
@@ -69,7 +69,7 @@
     <main>
         <div class="container py-5">
             <div class="text-dark text-center fade-in">
-                <h2 class="fade-in mb-2">Lowongan yang Tersedia</h2>
+                <h2 class="fade-in mb-2">Job Order yang Tersedia</h2>
             </div>
             <div class="text-dark text-center fade-in">
                 <p class="fade-in mb-5">____________________________________________________________</p>
@@ -85,7 +85,7 @@
                             </div>
                             <div class="text-center p-3">
                                 <a href="" class="text-decoration-none">
-                                    <h5>Lowongan Pabrik</h5>
+                                    <h5>Job Order Pabrik</h5>
                                 </a>
                                 </p>
                             </div>

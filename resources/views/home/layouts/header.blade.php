@@ -25,7 +25,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('lowongan') ? 'menu-active' : '' }}" href="/lowongan">Lowongan</a>
+                        <a class="nav-link {{ Request::is('joborder') ? 'menu-active' : '' }}" href="/joborder">Job Order</a>
                     </li>   
 
                     <li class="nav-item">

@@ -157,9 +157,13 @@ return [
 
     'providers' => ServiceProvider::defaultProviders()->merge([
         /*
-         * Package Service Providers...
+         * Laravel Framework Services Providers...
          */
 
+        /*
+         * Package Service Providers...
+         */
+        RealRashid\SweetAlert\SweetAlertServiceProvider::class,
         /*
          * Application Service Providers...
          */
