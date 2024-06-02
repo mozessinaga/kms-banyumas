@@ -1,6 +1,6 @@
-<footer class="footer mt-auto py-3 bg-light">
+<footer class="footer mt-auto py-3 bg-success">
     <div class="container">
-        <span class="text-muted">Created BY PT. Karyatama Mitra Sejati Cabang Banyumas</span>
+        <span class="text" style="color: #ffffff">Created BY PT. Karyatama Mitra Sejati Cabang Banyumas</span>
     </div>
 </footer>
 

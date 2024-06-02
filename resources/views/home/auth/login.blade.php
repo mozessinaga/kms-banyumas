@@ -1,49 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .center-screen {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-    </style>
-</head>
-<body>
-    <div class="container center-screen">
-        <div class="col-md-6">
-            <div class="card mt-5">
-                <div class="card-body">
-                    <div class="text-center">
-                        <img src="img/logo2.jpeg" alt="Company Logo" class="mb-3" style="max-width: 150px;">
-                    </div>
-                    <div class="text-center"><strong><h4>LOGIN</h4></strong></div>
-                    <p class="text-center">Akses Admin Karyatama Banyumas</p>
-                    <form action="">
-                        <div class="form-group">
-                            <label for=""><b>Username</b></label>
-                            <input type="text" name="name" class="form-control" placeholder="Username">
-                        </div>
-                        <div class="form-group mt-3">
-                            <label for=""><b>Password</b></label>
-                            <input type="password" name="password" class="form-control" placeholder="*****">
-                        </div>
+ <!-- Bootstrap core CSS -->
+ <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+ <link rel="stylesheet" href="/css/mystyle.css">
 
-                        <div class="text-center">
-                            <button class="btn btn-success mt-4 px-5">Login <i class="fas fa-sign-in-alt"></i></button>
-                        </div>
-                    </form>
+
+ <div class="d-flex justify-content-center align-items-center vh-100">
+    <div class="col-md-4">
+        <div class="card p-3 shadow">
+            <div class="card-body p-5">
+                <!-- Tombol Kembali -->
+                    <a href="/"><i class="fas fa-arrow-left"></i></a>
+                <div class="text-center mb-4">
+                    <img src="/img/logo2.jpeg" class="img-fluid" alt="Logo">
                 </div>
+                <h2 class="text-center mb-4">Login</h2>
+                <p class="text-center mb-4">Masukkan Akses Akun Anda</p>
+
+                @if (session()->has('loginError'))
+                    <div class="alert alert-danger" role="alert">
+                        {{ session('loginError') }}
+                    </div>
+                @endif
+
+                <form action="{{ route('login.do') }}" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" id="email"
+                            placeholder="Email Anda">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="password" name="password" class="form-control" id="password"
+                            placeholder="Password">
+                    </div>
+
+                    <button type="submit" class="btn btn-success btn-block mt-4">Login <i
+                            class="fas fa-sign-in-alt"></i></button>
+                </form>
+
+                
             </div>
         </div>
     </div>
+</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
-</html>

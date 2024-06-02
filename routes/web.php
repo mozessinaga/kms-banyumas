@@ -1,6 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminAuthController;
+use App\Http\Controllers\AdminBannerController;
+use App\Http\Controllers\AdminDashboardController;
+use App\Http\Controllers\AdminPesanController;
 use App\Http\Controllers\AdminUserController;
+use App\Http\Controllers\HomeBannerController;
+use App\Http\Controllers\HomeContactController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,13 +28,8 @@ Route::get('/', function () {
     return view('home.layouts.wrapper', $data);
 });
 
-
-Route::get('/joborder', function () {
-    $data = [
-        'content' => 'home/joborder/index'
-    ];
-    return view('home.layouts.wrapper', $data);
-});
+Route::get('/joborder', [HomeBannerController::class, 'index']);
+Route::get('/joborder/show/{id}', [HomeBannerController::class, 'show']);
 
 Route::get('/alur', function () {
     $data = [
@@ -37,32 +38,21 @@ Route::get('/alur', function () {
     return view('home.layouts.wrapper', $data);
 });
 
-Route::get('/contact', function () {
-    $data = [
-        'content' => 'home/contact/index'
-    ];
-    //return view('home.index');
-    return view('home.layouts.wrapper', $data);
-});
+Route::get('/contact', [HomeContactController::class, 'index']);
+Route::post('/contact/send', [HomeContactController::class, 'send']);
 
 
-Route::get('/login', function () {
-    $data = [
-        'content' => 'home/auth/login'
-    ];
-    //return view('home.index');
-    return view('home.layouts.wrapper', $data);
-});
+Route::get('/login', [AdminAuthController::class, 'index'])->name('login')->middleware('guest');
+Route::post('/login/do', [AdminAuthController::class, 'doLogin'])->name('login.do');
 
 // ======= ADMIN =======
-Route::prefix('/admin')->group(function(){
-    Route::get('/dashboard', function () {
-        $data = [
-            'content'   => 'admin/dashboard/index'
-        ];
+Route::prefix('/admin')->middleware('auth')->group(function () {
 
-        return view('admin.layouts.wrapper', $data);
-    });
+    Route::get('/logout', [AdminAuthController::class, 'logout']);
 
+    Route::get('/dashboard', [AdminDashboardController::class, 'index']);
+
+    Route::resource('/pesan', AdminPesanController::class);
+    Route::resource('/bannerjob', AdminBannerController::class);
     Route::resource('/user', AdminUserController::class);
 });

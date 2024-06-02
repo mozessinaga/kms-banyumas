@@ -32,18 +32,42 @@
 
         <div class="card mt-4">
             <div class="card-body">
-                <div class="form-group">
-                    <label for="">Nama</label>
-                    <input type="text" class="form-control" name="name" placeholder="Masukkan Nama Anda">
-                </div>
+                <form action="/contact/send" method="POST">
+                    @csrf
+                    <div class="form-group">
+                        <label for="">Nama</label>
+                        <input type="text" class="form-control @error('name') is-invalid @enderror" name="name"
+                            placeholder="Masukkan Nama Anda">
+                        @error('name')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="">Email</label>
+                        <input type="email" class="form-control @error('email') is-invalid @enderror" name="email"
+                            placeholder="Masukkan Email Anda">
+                        @error('email')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
 
-                <div class="form-group mt-4">
-                    <label for="">Isi Pesan</label>
-                    <textarea name="" id="" cols="30" rows="10" class="form-control"
-                        placeholder="Apa yang Ingin Anda Sampaikan Kepada Kami?"></textarea>
-                </div>
+                    <div class="form-group mt-4">
+                        <label for="">Isi Pesan</label>
+                        <textarea name="desc" id="" cols="30" rows="10"
+                            class="form-control @error('desc') is-invalid @enderror" placeholder="Apa yang Ingin Anda Sampaikan Kepada Kami?"></textarea>
+                        @error('desc')
+                            <div class="invalid-feedback">
+                                {{ $message }}
+                            </div>
+                        @enderror
+                    </div>
 
-                <button type="submit" class="btn btn-success mt-3">Kirim</button>
+                    <button type="submit" class="btn btn-success mt-3">Kirim</button>
+                </form>
             </div>
         </div>
 

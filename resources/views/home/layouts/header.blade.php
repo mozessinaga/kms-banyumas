@@ -1,6 +1,6 @@
 <style>
     .menu-active{
-        color: black !important;
+        color: rgb(21, 138, 37) !important;
         font-weight: bold;
     }
 </style>
@@ -9,7 +9,7 @@
     <!-- Fixed navbar -->
     <nav class="navbar navbar-expand-md navbar-light bg-light shadow">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="/img/logo2.jpeg" style="width: 50px; height: 50px;"></a>
+            <a class="navbar-brand" href="#"><img src="/img/logo2.png" style="width: 50px; height: 50px;"></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -25,7 +25,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link {{ Request::is('joborder') ? 'menu-active' : '' }}" href="/joborder">Job Order</a>
+                        <a class="nav-link {{ Request::is('joborder*') ? 'menu-active' : '' }}" href="/joborder">Job Order</a>
                     </li>   
 
                     <li class="nav-item">
@@ -33,7 +33,12 @@
                     </li>
                 </ul>
                 <form class="d-flex">
+                    @auth
+                    <a href="/admin/dashboard" class="btn btn-success"><i class="fas fa-user"></i> Dashboard</a>
+                    @else
                     <a href="/login" class="btn btn-success"><i class="fas fa-sign-in-alt"></i> Login</a>
+                    @endauth
+                </form>
             </div>
         </div>
     </nav>
