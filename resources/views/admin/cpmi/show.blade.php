@@ -4,18 +4,18 @@
             <div class="card-body">
                 <a href="/admin/cpmi" class="btn btn-primary px-3"><i class="fas fa-arrow-left"></i> Kembali</a>
                 <p id="created-at" data-created-at="{{ $cpmi->created_at }}">Daftar Pada </p>
-                <h4><b>{{ $cpmi->name }}</b></h4>
-                <h4><b>{{ $cpmi->partner_name }}</b></h4>
-                <h4><b>{{ $cpmi->job_target }}</b></h4>
-                <h4><b>{{ $cpmi->email }}</b></h4>
-                <h4><b>{{ $cpmi->phone }}</b></h4>
-                <h4><b>{{ $cpmi->address }}</b></h4>
-                <a href="{{ Storage::url($cpmi->kk) }}" target="_blank" class="btn btn-primary mb-3">Lihat Kartu Keluarga</a>
-                <img src="/{{ $cpmi->photo }}" width="100%" alt="">
-                <img src="/{{ $cpmi->ktp }}" width="100%" alt="">
-                <img src="/{{ $cpmi->kk }}" width="100%" alt="">
-                <img src="/{{ $cpmi->ijazah }}" width="100%" alt="">
-                <img src="/{{ $cpmi->sertifikat_vaksin }}" width="100%" alt="">
+                <h4 class="mb-4"><b>{{ $cpmi->name }}</b></h4>
+                <h4 class="mb-4"><b>{{ $cpmi->partner_name }}</b></h4>
+                <h4 class="mb-4"><b>{{ $cpmi->job_target }}</b></h4>
+                <h4 class="mb-4"><b>{{ $cpmi->email }}</b></h4>
+                <h4 class="mb-4"><b>{{ $cpmi->phone }}</b></h4>
+                <h4 class="mb-4"><b>{{ $cpmi->address }}</b></h4>
+                <p>Pasfoto</p>
+                <p class="mb-4"><img src="{{ Storage::url($cpmi->photo) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
+                <p class="mb-4"><img src="{{ Storage::url($cpmi->ktp) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
+                <p class="mb-4"><img src="{{ Storage::url($cpmi->kk) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
+                <p class="mb-4"><img src="{{ Storage::url($cpmi->ijazah) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
+                <p class="mb-4"><img src="{{ Storage::url($cpmi->sertifikat_vaksin) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
             </div>
         </div>
     </div>

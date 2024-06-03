@@ -59,5 +59,6 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
     Route::resource('/pesan', AdminPesanController::class);
     Route::resource('/bannerjob', AdminBannerController::class);
     Route::resource('/cpmi', AdminCPMIController::class);
+    Route::resource('/pendaftaran', HomePendaftaranController::class);
     Route::resource('/user', AdminUserController::class);
 });

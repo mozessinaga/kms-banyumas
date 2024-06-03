@@ -32,7 +32,7 @@
             <div class="info-box-content">
                 <span class="info-box-text">Peserta</span>
                 <span class="info-box-number">
-                    10
+                    {{ $cpmi }}
                     <small>Peserta Masuk</small>
                 </span>
             </div>

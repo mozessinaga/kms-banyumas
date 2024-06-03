@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class AdminCPMIController extends Controller
 {
@@ -76,5 +78,32 @@ class AdminCPMIController extends Controller
     public function destroy(string $id)
     {
         //
+        $cpmi = Pendaftaran::find($id);
+
+        if (!$cpmi) {
+            return redirect()->back()->with('error', 'Data not found');
+        }
+
+        // Delete the associated files from storage
+        if ($cpmi->photo) {
+            Storage::disk('public')->delete($cpmi->photo);
+        }
+        if ($cpmi->ktp) {
+            Storage::disk('public')->delete($cpmi->ktp);
+        }
+        if ($cpmi->kk) {
+            Storage::disk('public')->delete($cpmi->kk);
+        }
+        if ($cpmi->ijazah) {
+            Storage::disk('public')->delete($cpmi->ijazah);
+        }
+        if ($cpmi->sertifikat_vaksin) {
+            Storage::disk('public')->delete($cpmi->sertifikat_vaksin);
+        }
+
+        // Delete the entry from the database
+        $cpmi->delete();
+        Alert::success('BERHASIL', 'Peserta Berhasil Dihapus');
+        return redirect('/admin/cpmi');
     }
 }

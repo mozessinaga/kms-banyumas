@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\Pendaftaran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use RealRashid\SweetAlert\Facades\Alert;
 
 class HomePendaftaranController extends Controller
 {
@@ -51,24 +53,25 @@ class HomePendaftaranController extends Controller
         $registration = new Pendaftaran($validatedData);
 
         if ($request->hasFile('photo')) {
-            $registration->photo = $request->file('photo')->store('photos');
+            $registration->photo = $request->file('photo')->store('photos', 'public');
         }
         if ($request->hasFile('ktp')) {
-            $registration->ktp = $request->file('ktp')->store('ktp');
+            $registration->ktp = $request->file('ktp')->store('ktp', 'public');
         }
         if ($request->hasFile('kk')) {
-            $registration->kk = $request->file('kk')->store('kk');
+            $registration->kk = $request->file('kk')->store('kk', 'public');
         }
         if ($request->hasFile('ijazah')) {
-            $registration->ijazah = $request->file('ijazah')->store('ijazah');
+            $registration->ijazah = $request->file('ijazah')->store('ijazah', 'public');
         }
         if ($request->hasFile('sertifikat_vaksin')) {
-            $registration->sertifikat_vaksin = $request->file('sertifikat_vaksin')->store('vaksin');
+            $registration->sertifikat_vaksin = $request->file('sertifikat_vaksin')->store('vaksin', 'public');
         }
 
         $registration->save();
+        Alert::success('BERHASIL', 'Data Anda Berhasil Di Submit');
 
-        return redirect()->back()->with('success', 'Registration completed successfully!');
+        return redirect('/');
     }
 
     /**

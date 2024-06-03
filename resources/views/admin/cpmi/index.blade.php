@@ -4,11 +4,11 @@
             <div class="card-body">
                 <table class="table">
                     <tr>
-                        <td>No</td>
-                        <td>Nama</td>
-                        <td>Email</td>
-                        <td>Nomor Handphone/WA</td>
-                        <td>Alamat</td>
+                        <td width="100px">No</td>
+                        <td width="250px">Nama</td>
+                        <td width="250x">Pabrik Tujuan</td>
+                        <td width="200px">Nomor HP/WA</td>
+                        <td width="450px">Alamat</td>
                         <td>Action</td>
                     </tr>
                     @foreach ($cpmi as $item)
@@ -17,14 +17,12 @@
                             <td>
                                 <a href="/admin/cpmi/{{ $item->id }}"><b>{{ $item->name }}</b></a>
                             </td>
-                            <td>{{ $item->email }}</td>
+                            <td>{{ $item->job_target }}</td>
                             <td>{{ $item->phone }}</td>
                             <td>{!! Illuminate\Support\Str::limit($item->address, 100) !!}</td>
                             <td>
                                 <div class="d-flex">
-                                    <a href="/admin/user/{{ $item->id }}/edit" class="btn btn-success mx-2"><i class="fas fa-edit"></i>Edit</a>
-
-                                    <form action="/admin/user/{{ $item->id }}" method="POST">
+                                    <form action="/admin/cpmi/{{ $item->id }}" method="POST">
                                         @method('delete')
                                         @csrf
                                         <button type="submit" class="btn btn-danger"><i class="fas fa-trash"></i>Hapus</button>
