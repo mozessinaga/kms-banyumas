@@ -7,8 +7,8 @@
                         <td width="100px">#</td>
                         <td width="250px">Nama</td>
                         <td width="300px">Email</td>
-                        <td>Pesan</td>
-                        <td>Action</td>
+                        <td width="300px">No Handphone/WA</td>
+                        <td width="300px">Alamat</td>
                     </tr>
 
                     @foreach ( $pesan as $item )

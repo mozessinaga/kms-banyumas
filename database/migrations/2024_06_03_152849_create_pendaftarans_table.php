@@ -13,7 +13,7 @@ class CreatePendaftaransTable extends Migration
      */
     public function up()
     {
-        Schema::create('Pendaftaran', function (Blueprint $table) {
+        Schema::create('Pendaftarans', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('partner_name');
@@ -37,6 +37,6 @@ class CreatePendaftaransTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('Pendaftaran');
+        Schema::dropIfExists('Pendaftarans');
     }
 }

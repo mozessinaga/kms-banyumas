@@ -2,11 +2,13 @@
 
 use App\Http\Controllers\AdminAuthController;
 use App\Http\Controllers\AdminBannerController;
+use App\Http\Controllers\AdminCPMIController;
 use App\Http\Controllers\AdminDashboardController;
 use App\Http\Controllers\AdminPesanController;
 use App\Http\Controllers\AdminUserController;
 use App\Http\Controllers\HomeBannerController;
 use App\Http\Controllers\HomeContactController;
+use App\Http\Controllers\HomePendaftaranController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,12 +43,8 @@ Route::get('/alur', function () {
 Route::get('/contact', [HomeContactController::class, 'index']);
 Route::post('/contact/send', [HomeContactController::class, 'send']);
 
-Route::get('/pendaftaran', function () {
-    $data = [
-        'content' => 'home/pendaftaran/index'
-    ];
-    return view('home.layouts.wrapper', $data);
-});
+Route::get('/pendaftaran', [HomePendaftaranController::class, 'index']);
+Route::post('/pendaftaran', [HomePendaftaranController::class, 'store'])->name('registration.store');
 
 Route::get('/login', [AdminAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login/do', [AdminAuthController::class, 'doLogin'])->name('login.do');
@@ -60,5 +58,6 @@ Route::prefix('/admin')->middleware('auth')->group(function () {
 
     Route::resource('/pesan', AdminPesanController::class);
     Route::resource('/bannerjob', AdminBannerController::class);
+    Route::resource('/cpmi', AdminCPMIController::class);
     Route::resource('/user', AdminUserController::class);
 });

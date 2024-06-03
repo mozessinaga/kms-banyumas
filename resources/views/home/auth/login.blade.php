@@ -11,7 +11,7 @@
                 <!-- Tombol Kembali -->
                     <a href="/"><i class="fas fa-arrow-left"></i></a>
                 <div class="text-center mb-4">
-                    <img src="/img/logo2.jpeg" class="img-fluid" alt="Logo">
+                    <img src="/img/logo2.png" class="img-fluid" alt="Logo">
                 </div>
                 <h2 class="text-center mb-4">Login</h2>
                 <p class="text-center mb-4">Masukkan Akses Akun Anda</p>

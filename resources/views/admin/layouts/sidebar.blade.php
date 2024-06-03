@@ -1,7 +1,7 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="/" class="brand-link">
-      <img src="/img/logo2.jpeg" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <img src="/img/logo2.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
       <span class="brand-text font-weight-light">KMS Banyumas</span>
     </a>
 
@@ -34,7 +34,7 @@
 
 
           <li class="nav-item">
-            <a href="../widgets.html" class="nav-link">
+            <a href="/admin/cpmi" class="nav-link {{ Request::is('admin/cpmi*') ? 'active' : '' }}">
               <i class="nav-icon fas fa-list"></i>
               <p>
                 Peserta Masuk

@@ -13,6 +13,11 @@ class HomePendaftaranController extends Controller
     public function index()
     {
         //
+        $data = [
+            'pendaftaran' => Pendaftaran::get(),
+            'content' => 'home/pendaftaran/index',
+        ];
+        return view('home.layouts.wrapper', $data);
     }
 
     /**
@@ -41,8 +46,9 @@ class HomePendaftaranController extends Controller
             'ijazah' => 'required|file|mimes:jpeg,png,jpg,gif,pdf|max:2048',
             'sertifikat_vaksin' => 'required|file|mimes:jpeg,png,jpg,gif,pdf|max:2048',
         ]);
+        
 
-        $registration = new Registration($validatedData);
+        $registration = new Pendaftaran($validatedData);
 
         if ($request->hasFile('photo')) {
             $registration->photo = $request->file('photo')->store('photos');
@@ -54,10 +60,10 @@ class HomePendaftaranController extends Controller
             $registration->kk = $request->file('kk')->store('kk');
         }
         if ($request->hasFile('ijazah')) {
-            $registration->ijazah = $request->file('ijazah')->store('certificates');
+            $registration->ijazah = $request->file('ijazah')->store('ijazah');
         }
         if ($request->hasFile('sertifikat_vaksin')) {
-            $registration->vaccine_certificate = $request->file('sertifikat_vaksin')->store('vaccines');
+            $registration->sertifikat_vaksin = $request->file('sertifikat_vaksin')->store('vaksin');
         }
 
         $registration->save();
