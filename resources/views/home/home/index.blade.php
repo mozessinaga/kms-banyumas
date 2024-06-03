@@ -49,19 +49,15 @@
             </div>
             <div class="container">
                 <div class="carousel-caption">
-                    <h1>PT. Karyatama Mitra Sejati</h1>
-                    <h3>Handal dan Terpercaya</h3>
                 </div>
             </div>
         </div>
         <div class="carousel-item">
             <div class="wrapper-img-banner">
-                <img src="/img/banner2.jpg" class="img-banner" alt="">
+                <img src="/img/banner3.jpg" class="img-banner" alt="">
             </div>
             <div class="container">
                 <div class="carousel-caption text-end">
-                    <h1>PT. Karyatama Mitra Sejati</h1>
-                    <h3>Kami Siap Melayani Anda</h3>
                 </div>
             </div>
         </div>
@@ -133,7 +129,7 @@
             <div class="text-center">
                 <h2>Struktur Organisasi</h2>
                 <p>____________________________________________________________</p>
-                <img src="/img/logo2.jpeg" width="50%" height="50%" alt="">
+                <img src="/img/struktur organisasi.png" width="50%" height="50%" alt="">
             </div>
         </div>
     </div>
@@ -148,29 +144,23 @@
                 <h2>Prestasi Kami</h2>
                 <p>____________________________________________________________</p>
             </div>
-            <div class="row">
+            <div class="row d-flex justify-content-center">
                 <div class="col-md-3 my-3">
                     <div class="text-center">
-                        <img src="/img/logo2.jpeg" width="100%" alt="">
-                        <h5><b>Prestasi 1</b></h5>
+                        <img src="/img/piagam1.jpg" width="100%" alt="">
+                        <h5><b>Penilaian Kinerja/Rating PPTKIS 2012-2014 Semester 1 2015</b></h5>
                     </div>
                 </div>
                 <div class="col-md-3 my-3">
                     <div class="text-center">
-                        <img src="/img/logo2.jpeg" width="100%" alt="">
-                        <h5><b>Prestasi 2</b></h5>
+                        <img src="/img/piagam2.jpg" width="100%" alt="">
+                        <h5><b>Indonesian Migrant Worker Awards 2018</b></h5>
                     </div>
                 </div>
                 <div class="col-md-3 my-3">
                     <div class="text-center">
-                        <img src="/img/logo2.jpeg" width="100%" alt="">
-                        <h5><b>Prestasi 3</b></h5>
-                    </div>
-                </div>
-                <div class="col-md-3 my-3">
-                    <div class="text-center">
-                        <img src="/img/logo2.jpeg" width="100%" alt="">
-                        <h5><b>Partner 4</b></h5>
+                        <img src="/img/piagam3.jpg" width="100%" alt="">
+                        <h5><b>Indonesian Migrant Worker Awards 2019</b></h5>
                     </div>
                 </div>
             </div>
@@ -179,20 +169,9 @@
 </div>
 
 
-    <div class="bg-white fade-in">
-        <div class="container py-4 fade-in">
-            <div class="text-dark">
-                <div class="text-center">
-                    <h2>Alur Pelaksanaan</h2>
-                    <p>____________________________________________________________</p>
-                    <img src="/img/logo2.jpeg" width="50%" height="50%" alt="">
-                </div>
-            </div>
-        </div>
-    </div>
 
     
-    <div class="bg-light fade-in">
+    <div class="bg-white fade-in">
         <div class="container my-2 mb-5 fade-in">
             <div class="text-center">
                 <h3>Hubungi Kami</h3>
