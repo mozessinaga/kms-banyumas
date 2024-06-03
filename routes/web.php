@@ -41,6 +41,12 @@ Route::get('/alur', function () {
 Route::get('/contact', [HomeContactController::class, 'index']);
 Route::post('/contact/send', [HomeContactController::class, 'send']);
 
+Route::get('/pendaftaran', function () {
+    $data = [
+        'content' => 'home/pendaftaran/index'
+    ];
+    return view('home.layouts.wrapper', $data);
+});
 
 Route::get('/login', [AdminAuthController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login/do', [AdminAuthController::class, 'doLogin'])->name('login.do');

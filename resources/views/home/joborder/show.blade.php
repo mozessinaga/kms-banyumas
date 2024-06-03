@@ -52,7 +52,7 @@
 </div>
 
 <div class="button-container">
-    <a href="/...." class="daftar-button">
+    <a href="/pendaftaran" class="daftar-button">
         <i class="fas fa-file-alt"></i>
         Daftar
     </a>
