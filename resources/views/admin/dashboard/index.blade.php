@@ -2,7 +2,7 @@
     <div class="col-md-12">
         <div class="card">
             <div class="card-body bg-primary">
-                Selamat Datang {{ auth()->user()->name }} di Halaman Admin 😊😊
+                Selamat Datang <b>{{ auth()->user()->name }}</b> di Halaman Admin 😊😊
             </div>
         </div>
     </div>
