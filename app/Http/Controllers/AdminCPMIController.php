@@ -48,7 +48,7 @@ class AdminCPMIController extends Controller
     {
         //
         $data = [
-            'title'     => 'Data CPMI',
+            'title'     => 'Data Lengkap CPMI',
             'cpmi'      => Pendaftaran::find($id),
             'content'   => 'admin/cpmi/show'
 

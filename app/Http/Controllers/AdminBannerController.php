@@ -90,7 +90,7 @@ class AdminBannerController extends Controller
     {
         //
         $data = [
-            'title'     => 'Edit Banner',
+            'title'     => 'Edit Job Order',
             'bannerjob'      => Banner::find($id),
             'content'   => 'admin/bannerjob/edit'
 

@@ -1,21 +1,67 @@
-<div class="row">
-    <div class="col-md-8">
-        <div class="card">
-            <div class="card-body">
-                <a href="/admin/cpmi" class="btn btn-primary px-3"><i class="fas fa-arrow-left"></i> Kembali</a>
-                <p id="created-at" data-created-at="{{ $cpmi->created_at }}">Daftar Pada </p>
-                <h4 class="mb-4"><b>{{ $cpmi->name }}</b></h4>
-                <h4 class="mb-4"><b>{{ $cpmi->partner_name }}</b></h4>
-                <h4 class="mb-4"><b>{{ $cpmi->job_target }}</b></h4>
-                <h4 class="mb-4"><b>{{ $cpmi->email }}</b></h4>
-                <h4 class="mb-4"><b>{{ $cpmi->phone }}</b></h4>
-                <h4 class="mb-4"><b>{{ $cpmi->address }}</b></h4>
-                <p>Pasfoto</p>
-                <p class="mb-4"><img src="{{ Storage::url($cpmi->photo) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
-                <p class="mb-4"><img src="{{ Storage::url($cpmi->ktp) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
-                <p class="mb-4"><img src="{{ Storage::url($cpmi->kk) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
-                <p class="mb-4"><img src="{{ Storage::url($cpmi->ijazah) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
-                <p class="mb-4"><img src="{{ Storage::url($cpmi->sertifikat_vaksin) }}" alt="Pas Foto" class="img-fluid mb-3" style="max-width: 200px;"></p>
+<div class="row justify-content-center">
+    <div class="col-md-10">
+        <div class="card shadow-lg border-0">
+            <div class="card-body p-4">
+                <a href="/admin/cpmi" class="btn btn-primary px-3 mb-4"><i class="fas fa-arrow-left"></i> Kembali</a>
+                
+                <div class="mb-4">
+                    <p id="created-at" class="text-muted" data-created-at="{{ $cpmi->created_at }}">Daftar Pada</p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Nama Peserta</h5>
+                    <h4 class="mb-3"><b>{{ $cpmi->name }}</b></h4>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Mitra Kerja Asal</h5>
+                    <h4 class="mb-3"><b>{{ $cpmi->partner_name }}</b></h4>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Job Target</h5>
+                    <h4 class="mb-3"><b>{{ $cpmi->job_target }}</b></h4>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Email Peserta</h5>
+                    <h4 class="mb-3"><b>{{ $cpmi->email }}</b></h4>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Nomor HP/WA Peserta</h5>
+                    <h4 class="mb-3"><b>{{ $cpmi->phone }}</b></h4>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Alamat Peserta</h5>
+                    <h4 class="mb-3"><b>{{ $cpmi->address }}</b></h4>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Pasfoto Peserta</h5>
+                    <p class="mb-3"><img src="{{ Storage::url($cpmi->photo) }}" alt="Pas Foto" class="img-fluid" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Foto KTP</h5>
+                    <p class="mb-3"><img src="{{ Storage::url($cpmi->ktp) }}" alt="Foto KTP" class="img-fluid" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Foto KK</h5>
+                    <p class="mb-3"><img src="{{ Storage::url($cpmi->kk) }}" alt="Foto KK" class="img-fluid" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Foto Ijazah</h5>
+                    <p class="mb-3"><img src="{{ Storage::url($cpmi->ijazah) }}" alt="Foto Ijazah" class="img-fluid" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></p>
+                </div>
+
+                <div class="mb-4">
+                    <h5 class="text-primary">Foto Sertifikat Vaksin Terakhir</h5>
+                    <p class="mb-3"><img src="{{ Storage::url($cpmi->sertifikat_vaksin) }}" alt="Foto Sertifikat Vaksin" class="img-fluid" style="max-width: 200px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);"></p>
+                </div>
             </div>
         </div>
     </div>
@@ -37,3 +83,21 @@
         createdAtElement.textContent = 'Daftar Pada ' + formattedDate;
     });
 </script>
+
+<style>
+    .card {
+        border-radius: 12px;
+    }
+    .card-body {
+        padding: 30px;
+    }
+    .text-primary {
+        color: #189a3b !important;
+    }
+    .img-fluid {
+        border-radius: 8px;
+    }
+    .mb-4 {
+        margin-bottom: 1.5rem;
+    }
+</style>

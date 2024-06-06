@@ -50,7 +50,7 @@ class AdminPesanController extends Controller
         $pesan->save();
 
         $data = [
-            'title' => 'Manajemen Pesan',
+            'title' => 'Isi Pesan',
             'pesan' => $pesan,
             'content' => 'admin/pesan/show',
 

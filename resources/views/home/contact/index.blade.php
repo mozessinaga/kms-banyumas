@@ -6,20 +6,16 @@
         </header>
 
         <div class="contact-details">
-            <div class="contact-item animate-fade-in">
-                <i class="fas fa-phone fa-2x"></i>
-                <h3>08122734642</h3>
+            <div class="contact-item animate-fade-in d-flex align-items-center">
+                <i class="fas fa-phone fa-2x mr-3"></i>
+                <a href="https://wa.me/+6281394060849" target="blank" class="contact-link">Hubungi Kami di WhatsApp : <span
+                        class="contact-info-highlight">0812-2734-642</span></a>
             </div>
 
-            <div class="contact-item animate-fade-in">
-                <i class="fas fa-envelope fa-2x"></i>
-                <h3>karyatamamitrapwt@gmail.com</h3>
-            </div>
-
-            <div class="contact-item animate-fade-in">
-                <i class="fas fa-map-marker fa-2x"></i>
-                <h3>JL Veteran, No. 741 RT 3 RW 6, Pasir Muncang, Pasirmuncang Kulon, Pasirmuncang, Kec. Purwokerto
-                    Bar., Kabupaten Banyumas, Jawa Tengah 53161</h3>
+            <div class="contact-item animate-fade-in d-flex align-items-center mt-3">
+                <i class="fas fa-envelope fa-2x mr-3"></i>
+                <a href="mailto:ptkmspurwokerto@gmail.com" class="contact-link">Email: <span
+                        class="contact-info-highlight">ptkmspurwokerto@gmail.com</span></a>
             </div>
         </div>
 
@@ -30,7 +26,7 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
 
-        <div class="card mt-4">
+        <div class="card mt-4 ">
             <div class="card-body">
                 <form action="/contact/send" method="POST">
                     @csrf
@@ -74,3 +70,40 @@
 </div>
 </section>
 </div>
+
+<style>
+    .contact-details {
+        margin-top: 30px;
+    }
+
+    .contact-item {
+        margin-bottom: 20px;
+    }
+
+    .contact-link {
+        font-size: 18px;
+        color: #000103;
+        text-decoration: none;
+    }
+
+    .contact-link:hover {
+        text-decoration: underline;
+    }
+
+    .contact-info-highlight {
+        font-weight: bold;
+        color: #000;
+    }
+
+    .contact-item i {
+        color: #000205;
+    }
+
+    .map-container {
+        margin-top: 50px;
+    }
+
+    .card {
+        margin-top: 40px;
+    }
+</style>
