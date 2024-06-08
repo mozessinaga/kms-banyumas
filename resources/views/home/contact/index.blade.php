@@ -14,7 +14,7 @@
 
             <div class="contact-item animate-fade-in d-flex align-items-center mt-3">
                 <i class="fas fa-envelope fa-2x mr-3"></i>
-                <a href="mailto:ptkmspurwokerto@gmail.com" class="contact-link">Email: <span
+                <a href="mailto:ptkmspurwokerto@gmail.com" target="blank" class="contact-link">Email: <span
                         class="contact-info-highlight">ptkmspurwokerto@gmail.com</span></a>
             </div>
         </div>

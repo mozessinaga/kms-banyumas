@@ -42,11 +42,11 @@ class HomePendaftaranController extends Controller
             'email' => 'required|email|max:255',
             'phone' => 'required|string|max:255',
             'address' => 'required|string',
-            'photo' => 'required|file|image|mimes:jpeg,png,jpg,gif|max:2048',
-            'ktp' => 'required|file|mimes:jpeg,png,jpg,gif,pdf|max:2048',
-            'kk' => 'required|file|mimes:jpeg,png,jpg,gif,pdf|max:2048',
-            'ijazah' => 'required|file|mimes:jpeg,png,jpg,gif,pdf|max:2048',
-            'sertifikat_vaksin' => 'required|file|mimes:jpeg,png,jpg,gif,pdf|max:2048',
+            'photo' => 'required|file|image|mimes:jpeg,png,jpg|max:2048',
+            'ktp' => 'required|file|mimes:jpeg,png,jpg|max:2048',
+            'kk' => 'required|file|mimes:jpeg,png,jpg|max:2048',
+            'ijazah' => 'required|file|mimes:jpeg,png,jpg|max:2048',
+            'sertifikat_vaksin' => 'required|file|mimes:jpeg,png,jpg|max:2048',
         ]);
         
 

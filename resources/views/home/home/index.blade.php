@@ -48,7 +48,7 @@
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img src="/img/kms banyumas.jpg" width="100%" alt="KMS Banyumas" class="fade-in img-fluid rounded mb-4">
+                <img src="/img/kms banyumas.png" width="100%" alt="KMS Banyumas" class="fade-in img-fluid rounded mb-4">
             </div>
             <div class="col-md-6">
                 <p class="lead justified-text">PT. Karyatama Mitra Sejati adalah Perusahaan Penempatan Pekerja Migran Indonesia (PPPMI) yang berfokus pada penyaluran pekerja migran Indonesia (PPMI) tipe formal. Kantor pusat kami berlokasi di Medan, Sumatra Utara, dan dipimpin oleh Bapak Yandi Pananta. Kami memiliki cabang di Banyumas yang melayani wilayah Banjarnegara, Purbalingga, Banyumas, dan Cilacap. Kami berkomitmen untuk memberikan pelayanan terbaik dalam penyaluran pekerja migran Indonesia. Dengan pengelolaan dan pengawasan oleh organisasi pemerintah dan lembaga resmi terkait, kami menjamin tingkat keamanan yang tinggi bagi pekerja migran. Hak-hak mereka dilindungi secara hukum, termasuk upah yang adil, asuransi kesehatan, dan jaminan hak asasi manusia. Melalui pendekatan yang terorganisir dan diawasi ketat, kami memastikan distribusi tenaga kerja yang efisien dan terpercaya, sejalan dengan standar profesionalisme perusahaan.</p>

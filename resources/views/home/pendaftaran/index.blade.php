@@ -74,6 +74,7 @@
                     <div class="form-group mt-3">
                         <label for="photo">Pas Foto (Background Putih)</label>
                         <input type="file" class="form-control @error('photo') is-invalid @enderror" name="photo">
+                        <small class="form-text text-muted">Maksimal Ukuran Gambar 2MB</small>
                         @error('photo')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -83,6 +84,7 @@
                     <div class="form-group mt-3">
                         <label for="ktp">Scan KTP</label>
                         <input type="file" class="form-control @error('ktp') is-invalid @enderror" name="ktp">
+                        <small class="form-text text-muted">Maksimal Ukuran Gambar 2MB</small>
                         @error('ktp')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -92,6 +94,7 @@
                     <div class="form-group mt-3">
                         <label for="kk">Scan Kartu Keluarga(KK)</label>
                         <input type="file" class="form-control @error('kk') is-invalid @enderror" name="kk">
+                        <small class="form-text text-muted">Maksimal Ukuran Gambar 2MB</small>
                         @error('kk')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -101,6 +104,7 @@
                     <div class="form-group mt-3">
                         <label for="ijazah">Scan Halaman Depan Ijazah Terakhir</label>
                         <input type="file" class="form-control @error('ijazah') is-invalid @enderror" name="ijazah">
+                        <small class="form-text text-muted">Maksimal Ukuran Gambar 2MB</small>
                         @error('ijazah')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -110,6 +114,7 @@
                     <div class="form-group mt-3">
                         <label for="sertifikat_vaksin">Sertifikat Vaksinasi Terakhir</label>
                         <input type="file" class="form-control @error('sertifikat_vaksin') is-invalid @enderror" name="sertifikat_vaksin">
+                        <small class="form-text text-muted">Maksimal Ukuran Gambar 2MB</small>
                         @error('sertifikat_vaksin')
                             <div class="invalid-feedback">
                                 {{ $message }}
@@ -125,4 +130,3 @@
         </div>
     </section>
 </div>
-
