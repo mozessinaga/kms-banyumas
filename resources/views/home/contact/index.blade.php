@@ -8,7 +8,7 @@
         <div class="contact-details">
             <div class="contact-item animate-fade-in d-flex align-items-center">
                 <i class="fas fa-phone fa-2x mr-3"></i>
-                <a href="https://wa.me/+6281394060849" target="blank" class="contact-link">Hubungi Kami di WhatsApp : <span
+                <a href="https://wa.me/+628122734642" target="blank" class="contact-link">Hubungi Kami di WhatsApp : <span
                         class="contact-info-highlight">0812-2734-642</span></a>
             </div>
 
@@ -17,7 +17,6 @@
                 <a href="mailto:ptkmspurwokerto@gmail.com" target="blank" class="contact-link">Email: <span
                         class="contact-info-highlight">ptkmspurwokerto@gmail.com</span></a>
             </div>
-        </div>
 
         <div class="map-container animate-fade-in">
             <iframe
